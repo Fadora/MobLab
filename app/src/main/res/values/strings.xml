@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">MobLab</string>
+    <string name="basic_info">Basic info</string>
+    <string name="birthdate">Birthdate: %1$s</string>
+    <string name="race">Race: %1$s</string>
+    <string name="realm">Realm: %1$s</string>
+    <string name="gender">Gender: %1$s</string>
+    <string name="spouse">Spouse: %1$s</string>
+    <string name="dateofdeath">Date of Death: %1$s</string>
+    <string name="appearance">Appearance</string>
+    <string name="height">Height: %1$s</string>
+    <string name="hair">Hair color: %1$s</string>
+    <string name="quotes">Quotes</string>
 </resources>
