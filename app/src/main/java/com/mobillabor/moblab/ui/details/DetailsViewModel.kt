@@ -6,10 +6,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.mobillabor.moblab.model.Character
 import com.mobillabor.moblab.model.Quote
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 import kotlin.text.Typography.quote
 
+@HiltViewModel
 class DetailsViewModel @Inject constructor(
     detailsRepo: DetailsRepository
 )
@@ -24,7 +26,7 @@ class DetailsViewModel @Inject constructor(
             var quotes:List<Quote>? = null;
             if(char !=null){
                 quotes = detailsRepository.loadQuoteForCharFromAPI(charId)
-                if(quotes != null){
+                if(quotes != null && quotes.size > 4){
                     detailsRepository.saveFirst5Quotes(quotes.subList(0,5))
                 }
             }

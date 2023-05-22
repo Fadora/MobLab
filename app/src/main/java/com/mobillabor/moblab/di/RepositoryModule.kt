@@ -3,6 +3,7 @@ package com.mobillabor.moblab.di
 import com.mobillabor.moblab.network.LOTRService
 import com.mobillabor.moblab.persistence.CharacterDao
 import com.mobillabor.moblab.persistence.QuoteDao
+import com.mobillabor.moblab.ui.details.DetailsRepository
 import com.mobillabor.moblab.ui.main.MainRepository
 import dagger.Module
 import dagger.Provides
@@ -21,5 +22,14 @@ object RepositoryModule {
         characterDao: CharacterDao,
     ): MainRepository {
         return MainRepository(lotrService, characterDao)
+    };
+    @Provides
+    @ViewModelScoped
+    fun provideDetailsRepository(
+        lotrService: LOTRService,
+        characterDao: CharacterDao,
+        quoteDao: QuoteDao,
+    ): DetailsRepository {
+        return DetailsRepository(lotrService, characterDao, quoteDao)
     }
 }

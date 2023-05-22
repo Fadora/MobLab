@@ -10,7 +10,7 @@ import com.mobillabor.moblab.model.Character
 
 @Dao
 interface CharacterDao {
-    @Query("SELECT * FROM character WHERE charId =:id")
+    @Query("SELECT * FROM character WHERE _id =:id")
     suspend fun getCharacterById(id: String): Character
 
     @Query ("SELECT * FROM character")

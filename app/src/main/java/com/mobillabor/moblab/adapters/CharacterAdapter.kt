@@ -14,8 +14,8 @@ import com.mobillabor.moblab.model.Character
 interface OnCharacterClickListener {
     fun onCharacterSelected(h:Character)
 }
-class CharacterAdapter(): ListAdapter<Character, CharacterAdapter.CharacterViewHolder>(CharacterComparator){
-    lateinit var listener: OnCharacterClickListener
+class CharacterAdapter(val listener: OnCharacterClickListener): ListAdapter<Character, CharacterAdapter.CharacterViewHolder>(CharacterComparator){
+
 
 
 

@@ -13,14 +13,14 @@ class DetailsRepository @Inject constructor(
     private val quoteDao: QuoteDao
 ){
     suspend fun loadCharacterFromAPI(id: String): Character?{
-       return lotrService.fetchCharacterById(id).body()
+       return lotrService.fetchCharacterById(id).body()?.docs?.get(0)
     }
     suspend fun loadCharacterFromLocal(id: String): Character{
         return characterDao.getCharacterById(id)
     }
 
     suspend fun loadQuoteForCharFromAPI( id: String): List<Quote>? {
-        return lotrService.fetchQuotesForCharacter(id).body()
+        return lotrService.fetchQuotesForCharacter(id).body()?.docs
     }
     suspend fun loadQuoteForCharFromLocal(id: String): List<Quote>{
         return quoteDao.getQuotesForCharacter(id)

@@ -5,9 +5,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import javax.inject.Inject
 import com.mobillabor.moblab.model.Character
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 
-
+@HiltViewModel
 class MainViewModel @Inject constructor(
     mainRepository: MainRepository
 ): ViewModel(){

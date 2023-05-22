@@ -12,7 +12,7 @@ class MainRepository @Inject constructor(
 ) {
 
     suspend fun loadCharactersFromAPI():List<Character>?{
-        return lotrService.fetchLOTRCharacterList().body()
+        return lotrService.fetchLOTRCharacterList().body()?.docs
     }
     suspend fun loadCharactersFromLocal(): List<Character>{
         return characterDao.getAllCharacters()

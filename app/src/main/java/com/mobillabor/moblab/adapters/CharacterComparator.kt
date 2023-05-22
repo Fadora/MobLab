@@ -5,7 +5,7 @@ import com.mobillabor.moblab.model.Character
 
 object CharacterComparator : DiffUtil.ItemCallback<Character>(){
     override fun areItemsTheSame(oldItem: Character, newItem: Character): Boolean {
-        return oldItem.charId == newItem.charId
+        return oldItem._id == newItem._id
     }
 
     override fun areContentsTheSame(oldItem: Character, newItem: Character): Boolean {

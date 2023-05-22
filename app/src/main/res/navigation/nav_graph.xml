@@ -9,7 +9,7 @@
         android:name="com.mobillabor.moblab.ui.details.DetailsFragment"
         android:label="DetailsFragment" >
         <argument
-            android:name="characterId"
+            android:name="charID"
             app:argType="string" />
     </fragment>
     <fragment
