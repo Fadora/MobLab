@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MobLab</string>
+    <string name="app_name">LOTR_WIKI</string>
     <string name="basic_info">Basic info</string>
     <string name="birthdate">Birthdate: %1$s</string>
     <string name="race">Race: %1$s</string>
